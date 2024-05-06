@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ICET</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="./register.html" class="nav-link">Register</a></li>
+                    <li class="nav-item"><a href="./view.html" class="nav-link">View</a></li>
+                    <li class="nav-item"><a href="./manage.html" class="nav-link active">Manage Student</a></li>
+                    <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <input type="text" name="email" id="email" class="form-control"
+                    placeholder="Enter your Email address here" autocomplete="email">
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-warning" onclick="searchStudent()">Search</button>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="displayData">
+            <div class="col-6 mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" id="firstName" class="form-control" disabled>
+            </div>
+            <div class="col-6 mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" id="lastName" class="form-control" disabled>
+            </div>
+            <div class="col-6 mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" disabled>
+            </div>
+            <div class="col-6 mb-3">
+                <label for="nationality" class="form-label">Nationality</label>
+                <input type="text" class="form-control" id="nationality" disabled>
+            </div>
+            <div class="col-6 mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <input type="text" id="gender" class="form-control" disabled>
+            </div>
+            <div>
+                <label for="phoneNum" class="form-label">Contact Number</label>
+                <input type="text" id="phoneNum" class="form-control" disabled>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col d-flex justify-content-center">
+                <button type="button" id="btn-delete" class="btn btn-danger" onclick="deleteStudent()" disabled>Delete
+                    Student</button>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <footer>
+                <p class="text-center text-body-secondary">&copy; 2024 | Designed and developed by <a
+                        href="https://www.linkedin.com/in/m-d-w-de-silva-85bbb7272/">Dula</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="../img/sucess.png" height="20" width="20" class="rounded me-2" alt="success image">
+                <strong class="me-auto">Success</strong>
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Student record deleted completed!
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/manage.js"></script>
+</body>
+
+</html>

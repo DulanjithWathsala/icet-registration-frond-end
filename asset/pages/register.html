@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item"><a href="./register.html" class="nav-link active">Register</a></li>
+                    <li class="nav-item"><a href="./view.html" class="nav-link">View</a></li>
+                    <li class="nav-item"><a href="./manage.html" class="nav-link">Manage Student</a></li>
+                    <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+                </ul>
+            </header>
+        </div>
+
+        <div class="row mt-3">
+            <div class="d-flex justify-content-center" data-aos="zoom-in">
+                <img src="../img/university.jpg" class="img-fluid" width="1000" height="400"
+                    alt="university-students image">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <h1 class="display-5 text-center fw-bold">Student Registration</h1>
+        </div>
+
+        <div class="row border bg-info-subtle border-info-subtle rounded-5 mt-3 p-5">
+            <section class="mb-5">
+                <div class="mb-3">
+                    <h4>Personal Information</h4>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="txt-first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="txt-last-name" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <input type="date" class="form-control" id="input-date" placeholder="Date of Birth" required>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="txt-nationality" placeholder="Nationality" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <h4 class="mb-3">Gender</h4>
+                <div>
+                    <span class="ms-3 me-5">
+                        <input class="form-check-input" type="radio" name="gender" value="male" id="male">
+                        <label class="form-check-label" for="male">
+                            Male
+                        </label>
+                    </span>
+                    <span>
+                        <input class="form-check-input" type="radio" name="gender" value="female" id="female">
+                        <label class="form-check-label" for="female">
+                            Female
+                        </label>
+                    </span>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="mb-3">
+                    <h4>Contact Information</h4>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <input type="email" name="email" id="email" class="form-control" autocomplete="email"
+                            placeholder="Email Address" required>
+                    </div>
+                    <div class="col-6">
+                        <input type="tel" class="form-control" id="phone-num" placeholder="Phone Number" required>
+                    </div>
+                </div>
+            </section>
+
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-primary py-3 px-5" onclick="submitStudent()">Submit</button>
+            </div>
+        </div>
+
+
+        <div class="row mt-5">
+            <footer>
+                <p class="text-center text-body-secondary">&copy; 2024 | Designed and developed by <a
+                        href="https://www.linkedin.com/in/m-d-w-de-silva-85bbb7272/">Dula</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="../img/sucess.png" height="20" width="20" class="rounded me-2" alt="success image">
+                <strong class="me-auto">Success</strong>
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Registration completed!
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 2000
+        });
+    </script>
+</body>
+
+</html>
